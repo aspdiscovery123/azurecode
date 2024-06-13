@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Prediction</title>
+</head>
+<body>
+    <h1>Enter Parameters for Prediction</h1>
+    <form method="post">
+        <label for="temperature">Temperature:</label>
+        <input type="number" id="temperature" name="temperature" required step="any"><br><br>
+        
+        <label for="humidity">Humidity:</label>
+        <input type="number" id="humidity" name="humidity" required step="any"><br><br>
+
+        <label for="vacuum">vacuume:</label>
+        <input type="number" id="vacuum" name="vacuum" required step="any"><br><br>
+
+        <label for="pressure">Pressure:</label>
+        <input type="number" id="pressure" name="pressure" required step="any"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    {% if prediction is not none %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
